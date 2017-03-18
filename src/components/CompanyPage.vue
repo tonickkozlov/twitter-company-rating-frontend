@@ -1,7 +1,7 @@
 <template>
     <div class="company-page">
         <div v-for="block in tweetBlocks" key="block.id" class="company-page__tweet-block">
-            <p>Listing {{block.name}} tweets for {{account}}</p>
+            <div class="company-page__tweet-block-title">Showing most <span class="tweet-block-title-name">{{block.name}}</span> tweets for {{account}}</div>
             <TweetList :tweetIds="block.ids" />
         </div>
     </div>
@@ -32,8 +32,8 @@ export default {
         async updateTweets () {
             /** fetch best and worst tweets for a given company **/
             this.tweetBlocks = await Promise.all([
-                { id: 'worst', name: 'worst' },
-                { id: 'best', name: 'best' }
+                { id: 'worst', name: '😡' },
+                { id: 'best', name: '😍' }
             ].map(async block => {
                 const { ids } = await fetch(`company/${this.account}/${block.id}`)
                 return { ids, ...block }
@@ -45,4 +45,33 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.company-page {
+    display: flex;
+    height: 100%;
+    overflow-y: scroll;
+    justify-content: center;
+}
+
+.company-page__tweet-block {
+    margin: 0 20px;
+    height: 100%;
+}
+
+.company-page__tweet-block-title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid lightblue;
+}
+
+.company-page .tweet-list {
+    height: calc(100% - 50px);
+}
+
+.tweet-block-title-name {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 2em;
+}
 </style>
