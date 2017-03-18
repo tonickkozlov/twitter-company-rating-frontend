@@ -12,6 +12,7 @@
   "dependencies": {
     "vue": "^2.2.2",
     "vue-router": "^2.2.0",
+    "vue-tweet-embed": "^1.0.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

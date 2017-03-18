@@ -1,5 +1,5 @@
 import 'whatwg-fetch'
-const serverPrefix = 'http://localhost:5000/'
+const serverPrefix = 'http://82.196.8.94:5000/'
 
 /** will add app-specific data to requests */
 export default (url, ...args) => {
