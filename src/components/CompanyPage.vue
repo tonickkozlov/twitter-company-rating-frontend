@@ -58,7 +58,8 @@ export default {
 }
 
 .company-page__tweet-block-title {
-    height: 50px;
+    font-size: 20px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +67,7 @@ export default {
 }
 
 .company-page .tweet-list {
-    height: calc(100% - 50px);
+    height: calc(100% - 64px);
 }
 
 .tweet-block-title-name {

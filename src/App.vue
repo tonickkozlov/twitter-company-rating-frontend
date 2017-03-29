@@ -60,15 +60,7 @@ export default {
 </script>
 
 <style>
-html, body {
-    height: 100%;
-    box-sizing: border-box;
-    margin: 0;
-}
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     height: 100%;
@@ -80,6 +72,10 @@ html, body {
     height: 100%;
 }
 
+.companies-search {
+    padding-top: 10px;
+}
+
 .companies-search > input {
     height: 50px;
     border-bottom: 2px solid red;
@@ -89,9 +85,6 @@ html, body {
     font-size: 23px;
     border-bottom: 4px solid #d7e5ac;
     background-color: transparent;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #2c3e50;
 }
 
 input:focus {
@@ -111,6 +104,7 @@ input:focus {
 }
 
 .company-details {
+    height: 100%;
     flex: 3;
 }
 </style>
